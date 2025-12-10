@@ -1,5 +1,3 @@
-_This project has been created as part of the 42 curriculum by syedh._
-
 # Description
 push_swap sorts a stack of unique integers using a limited instruction set and prints the operations. Stack **a** starts filled, stack **b** starts empty. The goal is the fewest moves while respecting the 42 rules (no globals, proper errors, no leaks, Norm compliance).
 
@@ -32,3 +30,4 @@ push_swap sorts a stack of unique integers using a limited instruction set and p
 - 42 subject PDF for push_swap
 - References: linked list basics (any C data structures primer), rotation/swap operations per subject
 - AI usage: Used an AI assistant to help draft this README and summarize the algorithm; all code and logic were reviewed and understood before inclusion.
+
