@@ -26,9 +26,4 @@ push_swap sorts a stack of unique integers using a limited instruction set and p
 - With one quoted arg: `./push_swap "2 1 3 6 5 8"`
 - Validate with checker: `ARG="4 67 3 87 23"; ./push_swap $ARG | ./checker_OS $ARG`
 
-# Resources
-- 42 subject PDF for push_swap
-- References: linked list basics (any C data structures primer), rotation/swap operations per subject
-- AI usage: Used an AI assistant to help draft this README and summarize the algorithm; all code and logic were reviewed and understood before inclusion.
-
 
