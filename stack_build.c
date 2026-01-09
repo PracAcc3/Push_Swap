@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_build.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: synoshah <synoshah@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: synoshah <synoshah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/08 15:30:52 by synoshah          #+#    #+#             */
-/*   Updated: 2026/01/08 15:30:52 by synoshah         ###   ########.fr       */
+/*   Created: 2026/01/09 17:12:22 by synoshah          #+#    #+#             */
+/*   Updated: 2026/01/09 17:12:22 by synoshah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,9 @@ static long	ft_atol(const char *s)
 
 	result = 0;
 	sign = 1;
-	while (*s == ' ' || *s == '\t' || *s == '\n' || \
-			*s == '\r' || *s == '\f' || *s == '\v')
+	while (ft_isspace(*s))
 		s++;
-	if (*s == '-' || *s == '+')
+	if (ft_issign(*s))
 	{
 		if (*s == '-')
 			sign = -1;
@@ -40,12 +39,10 @@ static void	append_node(t_stack_node **stack, int nbr)
 
 	if (!stack)
 		return ;
-	new_node = malloc(sizeof(t_stack_node));
+	new_node = ft_calloc(1, sizeof(t_stack_node));
 	if (!new_node)
 		return ;
-	new_node->next = NULL;
 	new_node->nbr = nbr;
-	new_node->cheapest = 0;
 	if (!(*stack))
 	{
 		*stack = new_node;
@@ -62,15 +59,8 @@ static void	append_node(t_stack_node **stack, int nbr)
 static void	parse_error(t_stack_node **stack_a, char **argv,
 					bool free_args_on_error)
 {
-	int	index;
-
-	index = 0;
 	if (free_args_on_error)
-	{
-		while (argv && argv[index])
-			free(argv[index++]);
-		free(argv);
-	}
+		free_argv(argv);
 	free_errors(stack_a);
 }
 

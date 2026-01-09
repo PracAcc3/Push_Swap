@@ -11,6 +11,9 @@ SRCS			= main.c \
 				  setup_a.c \
 				  setup_b.c \
 				  split_args.c \
+				  utils.c \
+				  utils1.c \
+				  utils2.c \
 				  stack_build.c \
 				  stack_prep.c \
 				  stack_utils.c \

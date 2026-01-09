@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_prep.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: synoshah <synoshah@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: synoshah <synoshah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/08 15:30:52 by synoshah          #+#    #+#             */
-/*   Updated: 2026/01/08 15:30:52 by synoshah         ###   ########.fr       */
+/*   Created: 2026/01/09 17:12:14 by synoshah          #+#    #+#             */
+/*   Updated: 2026/01/09 17:12:14 by synoshah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

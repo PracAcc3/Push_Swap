@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   op_rotate.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: synoshah <synoshah@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: synoshah <synoshah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/08 15:30:27 by synoshah          #+#    #+#             */
-/*   Updated: 2026/01/08 15:30:27 by synoshah         ###   ########.fr       */
+/*   Created: 2026/01/09 17:13:31 by synoshah          #+#    #+#             */
+/*   Updated: 2026/01/09 17:13:31 by synoshah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static void	rotate(t_stack_node **stack)
 	(*stack)->prev = NULL;
 	tail_node->next->prev = tail_node;
 	tail_node->next->next = NULL;
-}		
+}
 
 void	ra(t_stack_node **stack_a, bool silent)
 {

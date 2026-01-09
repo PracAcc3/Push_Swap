@@ -3,26 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: synoshah <synoshah@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: synoshah <synoshah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/08 15:30:19 by synoshah          #+#    #+#             */
-/*   Updated: 2026/01/08 15:30:19 by synoshah         ###   ########.fr       */
+/*   Created: 2026/01/09 17:13:54 by synoshah          #+#    #+#             */
+/*   Updated: 2026/01/09 17:13:54 by synoshah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-static void	free_argv(char **argv)
-{
-	int	index;
-
-	index = 0;
-	if (!argv)
-		return ;
-	while (argv[index])
-		free(argv[index++]);
-	free(argv);
-}
 
 static int	prepare_args(int argc, char **argv,
 					char ***split_args, char ***input_args)
@@ -31,16 +19,14 @@ static int	prepare_args(int argc, char **argv,
 		return (0);
 	if (argc == 2 && !argv[1][0])
 	{
-		write(2, "Error\n", 6);
-		return (1);
+		return (ps_error());
 	}
 	if (argc == 2)
 	{
 		*split_args = split(argv[1], ' ');
 		if (!*split_args)
 		{
-			write(2, "Error\n", 6);
-			return (1);
+			return (ps_error());
 		}
 		*input_args = *split_args;
 		return (2);
@@ -60,6 +46,10 @@ static void	sort_if_needed(t_stack_node **stack_a, t_stack_node **stack_b)
 		sa(stack_a, false);
 	else if (len == 3)
 		sort_three(stack_a);
+	else if (len == 4)
+		sort_four(stack_a, stack_b);
+	else if (len == 5)
+		sort_five(stack_a, stack_b);
 	else
 		sort_stacks(stack_a, stack_b);
 }
@@ -70,7 +60,7 @@ int	main(int argc, char **argv)
 	t_stack_node	*stack_b;
 	char			**split_args;
 	char			**input_args;
-	int			parse_status;
+	int				parse_status;
 
 	stack_a = NULL;
 	stack_b = NULL;

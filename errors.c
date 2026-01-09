@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   errors.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: synoshah <synoshah@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: synoshah <synoshah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/08 15:30:15 by synoshah          #+#    #+#             */
-/*   Updated: 2026/01/08 15:30:15 by synoshah         ###   ########.fr       */
+/*   Created: 2026/01/09 17:14:02 by synoshah          #+#    #+#             */
+/*   Updated: 2026/01/09 17:14:02 by synoshah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,14 @@
 
 int	error_syntax(char *token)
 {
-	if (!(*token == '+'
-			|| *token == '-'
-			|| (*token >= '0' && *token <= '9')))
+	if (!(*token == '+' || ft_issign(*token) || (ft_isdigit(*token))))
 		return (1);
-	if ((*token == '+'
-			|| *token == '-')
-		&& !(token[1] >= '0' && token[1] <= '9'))
+	if ((ft_issign(*token))
+		&& !(ft_isdigit(token[1])))
 		return (1);
 	while (*++token)
 	{
-		if (!(*token >= '0' && *token <= '9'))
+		if (!(ft_isdigit(*token)))
 			return (1);
 	}
 	return (0);
@@ -64,6 +61,6 @@ void	free_stack(t_stack_node **stack)
 void	free_errors(t_stack_node **stack)
 {
 	free_stack(stack);
-	write(2, "Error\n", 6);
+	ft_putendl_fd("Error", 2);
 	exit(1);
 }

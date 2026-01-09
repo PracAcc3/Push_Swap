@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   op_rev_rotate.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: synoshah <synoshah@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: synoshah <synoshah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/08 15:30:25 by synoshah          #+#    #+#             */
-/*   Updated: 2026/01/08 15:30:25 by synoshah         ###   ########.fr       */
+/*   Created: 2026/01/09 17:13:38 by synoshah          #+#    #+#             */
+/*   Updated: 2026/01/09 17:13:38 by synoshah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
