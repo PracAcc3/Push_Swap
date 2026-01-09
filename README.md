@@ -1,4 +1,4 @@
-This project has been created as part of the 42 curriculum by <synoshah>.
+This project is by synoshah.
 
 # push_swap
 
@@ -59,3 +59,4 @@ This project uses a greedy “cheapest move” approach.
 ## Behavior notes
 
 - Empty input or already-sorted input: prints nothing and exits cleanly.
+
