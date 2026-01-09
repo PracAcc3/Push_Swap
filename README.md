@@ -47,16 +47,17 @@ This project uses a greedy “cheapest move” approach.
 - For 2 numbers: swap if needed.
 - For 3 numbers: a small special-case sorter.
 - For bigger inputs:
-  1) Push a couple of elements from **a** to **b**.
-  2) While **a** still has more than 3 elements:
+  1: Push a couple of elements from **a** to **b**.
+  2: While **a** still has more than 3 elements:
      - For every node in **a**, compute where it should land in **b** (its `target_node`).
      - Compute the cost in rotations to bring both the node and its target to the top.
      - Pick the cheapest node, use `rr` / `rrr` when both stacks rotate the same way, then `pb`.
-  3) Sort the last 3 in **a**.
-  4) Push everything back from **b** to **a**, always aligning the target first.
-  5) Finish with a final rotate so the minimum value is on top.
+  3: Sort the last 3 in **a**.
+  4: Push everything back from **b** to **a**, always aligning the target first.
+  5: Finish with a final rotate so the minimum value is on top.
 
 ## Behavior notes
 
 - Empty input or already-sorted input: prints nothing and exits cleanly.
+
 
